@@ -16,13 +16,17 @@
  
  class App extends React.Component{
 
+  state = {
+    name:" App Component"
+  }
     render()
     {
         return (
             <div>
-              <Header/>
-              <Content/>
-              <Footer/>
+              <p>{this.state.name}</p>
+              <Header name="header"/>
+              <Content name="content" />
+              <Footer name={this.state.name}/>
             </div>
         )
     }
@@ -30,29 +34,38 @@
 
 
  class Header extends React.Component{
+  state = {
+    name:" Header Component"
+  }
     render ()
     {
         return(
             
-              <header>Header Component</header>             
+              <header>{this.props.name} and {this.state.name}</header>             
         )
     }
  }
  class Content extends React.Component{
+  state = {
+    name:" Content Component"
+  }
     render ()
     {
         return(
           
-                <main>Main Component</main>
+                <main>{this.props.name} and {this.state.name}</main>
             
         )
     }
  }
  class Footer extends React.Component{
+  state = {
+    name:" Footer Component"
+  }
     render ()
     {
         return(
-            <footer>Footer Component</footer> 
+            <footer>{this.props.name}and {this.state.name}</footer> 
         )
     }
  }
