@@ -10,13 +10,42 @@
   <body>
     <h1>Basic Example with JSX / hello react</h1>
 
-    <div id="app"></div>   
+    <div id="app"></div> 
+    <div id="div2"></div>   
+    <div id="div3"></div>   
+    <div id="doc"></div> 
    
 <script type="text/babel">
+ // JSX Examble
     const name = 'shaimaa';
-    const elem= <p> Hellow JSX with {name}</p>;
-    
-     ReactDOM.render(elem,document.getElementById("app"));
+    const elem= <p> Hellow JSX with {name}</p>;    
+    ReactDOM.render(elem,document.getElementById("app"));
+
+     // Component Examble
+     //1- basic way
+     function App(){
+      return (
+        <div>
+          <p>Hello Component1</p>
+        </div>
+      )
+     }
+     ReactDOM.render(<App/>,document.getElementById('div2'));
+     //1- React- Standered way
+
+     class App2 extends React.Component {
+        render()
+        {
+          return (
+            <div>
+              <p>Hello Component2</p>
+            </div>
+          )
+        }
+
+     }
+     ReactDOM.render(<App2/>,document.getElementById('div3'));
+
 </script>
   </body>
 </html>

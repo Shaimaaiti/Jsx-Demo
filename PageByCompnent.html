@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>React</title>
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>hello react</h1>
+
+    <div id="app"></div> 
+   
+<script type="text/babel"> 
+ 
+ class App extends React.Component{
+
+    render()
+    {
+        return (
+            <div>
+              <Header/>
+              <Content/>
+              <Footer/>
+            </div>
+        )
+    }
+ }
+
+
+ class Header extends React.Component{
+    render ()
+    {
+        return(
+            
+              <header>Header Component</header>             
+        )
+    }
+ }
+ class Content extends React.Component{
+    render ()
+    {
+        return(
+          
+                <main>Main Component</main>
+            
+        )
+    }
+ }
+ class Footer extends React.Component{
+    render ()
+    {
+        return(
+            <footer>Footer Component</footer> 
+        )
+    }
+ }
+  
+ ReactDOM.render(<App/>, document.getElementById('app'));
+</script>
+  </body>
+</html>
